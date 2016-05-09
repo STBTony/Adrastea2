@@ -9,16 +9,16 @@ body{
 }
 
 ::selection {
-		background: #000;
-		color: #fff;
-		text-shadow: none;
-	}
-	
-	::-moz-selection {
-		background: #000;
-		color: #fff;
-		text-shadow: none;
-	}
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+  }
+  
+  ::-moz-selection {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+  }
 
 p{
   font-family: 'Raleway', sans-serif;
@@ -29,11 +29,11 @@ p{
 a{
   text-decoration:none;
   -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
-	border-bottom:1px solid #dedede;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
+  border-bottom:1px solid #dedede;
 }
 
 a:focus {
@@ -175,16 +175,16 @@ header.boxed{
   position:fixed;
   width:100%;
   margin:0 auto;
-  height:80px;
+  height:40px;
   z-index:9999;
   display:none;
   background:none;
   top:0;
     -webkit-transition: background 0.2s ease-in;
-	-moz-transition: background 0.2s ease-in;
-	-ms-transition: background 0.2s ease-in;
-	-o-transition: background 0.2s ease-in;
-	transition: background 0.2s ease-in; 
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in; 
 }
 
 header.boxed .header-margin{
@@ -206,12 +206,12 @@ ul.social-icon a{
   float:right;
   font-size:15px;
   border-bottom:0;
-  color:black;
+  color:#7d7d7d;
   padding-right:0px !important;
 }
 
 ul.social-icon a:hover{
-  color:#c3c3c3;
+  color:#EBEBEB;
 }
 
 .menu-index{
@@ -524,10 +524,10 @@ li.grid-item{
   z-index: 2;
   opacity: 0;
   -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
 }
 
 .grid-hover:hover{
@@ -570,9 +570,8 @@ FOOTER
 #footer-box{height:150px; margin-top:75px;}
 
 footer{
-  background: #f1f1f1;
+  background: #fff;
   width:100%;
-  margin-top:150px;
   height:300px;
   overflow:hidden;
   position:relative;
@@ -606,7 +605,7 @@ footer{
 }
 
 .footer-margin .social-footer a{
-  font-size:15px;
+  font-size:18px;
   color:black;
   padding: 20px;
 }
@@ -693,16 +692,111 @@ textarea{
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
     -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
 }
 
 textarea:focus{background:#f4f4f4; height:250px;}
 
-
-.home{
-  width:100%;
+#canvas-wrap { 
+  position:relative;
   text-align: center;
+} /* Make this a positioned parent */
+#overlay { 
+  position:absolute;
+  z-index:90;
+  top: 110vh;
+  width: 100%;
+}
+
+.lineart { 
+  z-index: 0;
+  margin:0px;
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  position: relative;
+  background-color: #000;
+}
+.home {
+  width:480px;
+  max-width:100%;
+  display:block;
+  margin:auto;
+}
+
+.home-hover{  
+  display: block;
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  text-align: center;
+  background-color: #797979;
+  z-index: 90;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
+}
+.home-hover-white{  
+  display: block;
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  background-color: #101010;
+  z-index: 90;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
+}
+.home-hover:hover, .home-hover-white:hover{
+  opacity: 0.2;
+}
+li.home-item{
+  background-color: #000;
+  width:100%;
+  position:relative;
+  float:right;
+  display:block;
+  margin:auto;
+  z-index: 90;
+}
+.social-header{
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 13px;
+  width: 100%;
+  text-align:center;
+  float: right;
+}
+.social-header a{
+  font-size: 20px;
+}
+.social-header a:hover{
+  color:#c3c3c3;
+}
+
+.back-icon{
+  float:left;
+}
+
+.back-icon{
+  float:left;
+  font-size:15px;
+  border-bottom:0;
+  color:#7d7d7d;
+  padding-right:0px !important;
+}
+
+.back-icon:hover{
+  color:#EBEBEB;
 }

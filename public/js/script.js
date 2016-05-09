@@ -168,8 +168,8 @@ $(document).ready(function(){
 	setTimeout( function(){
 		if($("#site-type").length) {
         $(".typewrite span").typed({
-            strings: ["show case ", "projects ", "YOLO"],
-            typeSpeed: 100,
+            strings: ["How to","Where at","What for","WHY NOT?","YNOT"],
+            typeSpeed: 20,
             backDelay: 500,
             loop: false,
             contentType: 'html', // or text
@@ -223,6 +223,7 @@ Check Preloader
 
 function preloaderCheck() {
     showPreloader();
+
     $(window).load(function() {
         hidePreloader();
     });
@@ -237,7 +238,7 @@ function showPreloader() {
 }
 
 function hidePreloader() {
-  $(".preloader").delay(2000).fadeOut("slow");
+  $(".preloader").delay(2500).fadeOut("slow");
 }
 
 
